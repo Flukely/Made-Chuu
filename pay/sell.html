@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Information</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ปรับแต่งสไตล์ของป๊อปอัป */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .popup h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .popup .details {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .popup .details p {
+            margin: 5px 0;
+        }
+        .popup .details .item {
+            display: flex;
+            justify-content: space-between;
+        }
+        .popup .buttons {
+            margin-top: 15px;
+        }
+        .popup .buttons a {
+            margin: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .popup .buttons .save {
+            background-color: #4CAF50;
+        }
+        .popup .buttons .next {
+            background-color: #007BFF;
+        }
+        .popup .close {
+            margin-top: 10px;
+            display: block;
+            color: #555;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -21,29 +80,68 @@
                 กรุณาชำระภายใน <span class="right-align">หมดเวลา 08 ธ.ค. 2024, 15:03</span>
             </p>
         </div>
-            <div class="qr-section">
-                <img src="/img/Qr.jpg" alt="QR Code">
-            </div>
-            
-            <div class="instructions">
-                กรุณาทำตามขั้นตอนดังต่อไปนี้:
-                <ol>
-                    <li>คลิกปุ่ม "บันทึก QR" หรือแคปหน้าจอ</li>
-                    <li>เปิดแอปพลิเคชันธนาคารบนอุปกรณ์ของท่าน</li>
-                    <li>เลือกไปที่ปุ่ม "สแกน" หรือ "QR Code" และกดที่ "รูปภาพ"</li>
-                    <li>เลือกรูปภาพที่ท่านแคปไว้และทำการชำระเงิน โดยกรุณาเช็คเชื่อบัญชีของผู้รับเงินคือ "มนัสนันท์ คงมณี"</li>
-                    <li>หลังจากชำระเงินเสร็จสิ้นกรุณากลับไปตรวจสอบสถานะการชำระเงินในเว็บหากการเงินยังไม่มีการอัพเดต กรุณาติดต่อฝ่ายลุกค้าสัมพันธ์ Made Chuu ที่ 097-307-0982</li>
-                    <li>QR สามารถแสกนได้ 1 ครั้งต่อ 1 การชำระเงินเท่านั้น หากต้องการแสกนใหม่ โปรดรีเฟรช QR อีกครั้ง</li>
-                </ol>
-            
+        <div class="qr-section">
+            <img src="/img/Qr.jpg" alt="QR Code">
+        </div>
+        <div class="instructions">
+            กรุณาทำตามขั้นตอนดังต่อไปนี้:
+            <ol>
+                <li>คลิกปุ่ม "บันทึก QR" หรือแคปหน้าจอ</li>
+                <li>เปิดแอปพลิเคชันธนาคารบนอุปกรณ์ของท่าน</li>
+                <li>เลือกไปที่ปุ่ม "สแกน" หรือ "QR Code" และกดที่ "รูปภาพ"</li>
+                <li>เลือกรูปภาพที่ท่านแคปไว้และทำการชำระเงิน โดยกรุณาเช็คชื่อบัญชีของผู้รับเงินคือ "มนัสนันท์ คงมณี"</li>
+                <li>หลังจากชำระเงินเสร็จสิ้นกรุณากลับไปตรวจสอบสถานะการชำระเงินในเว็บ หากการเงินยังไม่มีการอัพเดต กรุณาติดต่อฝ่ายลุกค้าสัมพันธ์ Made Chuu ที่ 097-307-0982</li>
+                <li>QR สามารถแสกนได้ 1 ครั้งต่อ 1 การชำระเงินเท่านั้น หากต้องการแสกนใหม่ โปรดรีเฟรช QR อีกครั้ง</li>
+            </ol>
             <div class="actions">
                 <a href="#" class="button">บันทึก QR</a>
-                <a href="/tracking/tracking_Fin.html" class="button secondary">ตกลง</a>
+                <a href="#" class="button secondary" onclick="showPopup()">ตกลง</a>
             </div>
             <div class="note">
-                หมายเหตุ:ช่องทางการชำระเงินใช้ได้กับแอปพลิเคชันธนาคารเท่านั้น ไม่สามารถชำระผ่านสาขาธนาคารหรือตู้เอทีเอ็มได้
+                หมายเหตุ: ช่องทางการชำระเงินใช้ได้กับแอปพลิเคชันธนาคารเท่านั้น ไม่สามารถชำระผ่านสาขาธนาคารหรือตู้เอทีเอ็มได้
             </div>
         </div>
     </div>
+
+    <!-- ป๊อปอัปแสดงใบเสร็จ -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <h3>ใบเสร็จการชำระเงิน</h3>
+            <div class="details">
+                <p>หมายเลขคำสั่งซื้อ: <strong>123456789</strong></p>
+                <p>วันที่ชำระเงิน: <strong>08 ธ.ค. 2024</strong></p>
+                <p>ยอดเงินที่ชำระ: <strong>10.99 บาท</strong></p>
+                <hr>
+                <p><strong>รายการสินค้า:</strong></p>
+                <div class="item">
+                    <span>สินค้า A</span>
+                    <span>5.00 บาท</span>
+                </div>
+                <div class="item">
+                    <span>สินค้า B</span>
+                    <span>3.00 บาท</span>
+                </div>
+                <div class="item">
+                    <span>สินค้า C</span>
+                    <span>2.99 บาท</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" class="save">บันทึกใบเสร็จ</a>
+                <a href="/next-page.html" class="next">ถัดไป</a>
+            </div>
+            <span class="close" onclick="closePopup()">ปิด</span>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
