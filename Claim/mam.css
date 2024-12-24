@@ -1,0 +1,429 @@
+/* เปลี่ยนสีข้อความเป็นสีชมพู */
+.pink-text {
+    color: #FF69B4;
+    font-weight: bold;
+}
+
+/* จัดรูปแบบของอวาตาร์ */
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* ตกแต่งปุ่ม */
+.footer-buttons .btn-detail {
+    background-color: #FFC0CB;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ตกแต่งภาพสินค้า */
+.item-img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* จัดวางช่องสรุปข้อมูล */
+.summary {
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+body {
+    font-family: sarabun;
+    margin: 0;
+    padding: 0;
+  }
+  .pink-text {
+    color: #FF69B4; /* สีชมพู */
+    font-weight: bold; /* ตัวหนา (ถ้าต้องการ) */
+  }
+  .header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .progress-bar {
+    display: flex; /* จัดเรียงแบบแถว */
+    justify-content: space-between; /* เว้นระยะห่างระหว่างแต่ละ item */
+    align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
+    padding: 10px 20px; /* เพิ่มระยะขอบภายใน */
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc; /* สีเทาเริ่มต้น */
+    margin-bottom: 5px; /* เว้นระยะห่างระหว่างลูกกลมและข้อความ */
+  }
+  .circle1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF69B4; 
+    margin-bottom: 5px; /* เว้นระยะห่างระหว่างลูกกลมและข้อความ */
+    padding-left: 20px;
+  }
+  .lol{
+    display: flex;
+    width: 300px;
+  }
+  .progress-item p {
+    margin-top: 5px;
+  }
+  .progress-item.active .circle {
+    background-color: #FF69B4; /* สีชมพูในสถานะที่กำหนด */
+  }
+  
+  .progress-item.active p {
+    color: #FF69B4; /* ข้อความสีชมพูในสถานะที่กำหนด */
+  }
+  
+  /* ถ้าต้องการแสดงวงกลมเป็นสีเทาในหน้าทั่วไป */
+  .progress-item:not(.active) .circle {
+    background-color: #888; /* สีเทา */
+  }
+  
+  /* ถ้าต้องการทำให้ข้อความในขั้นตอนที่ไม่ได้อยู่ในหน้าปัจจุบันเป็นสีเทา */
+  .progress-item:not(.active) p {
+    color: #888;
+  }
+  .progress-item {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* เพิ่มระยะห่างระหว่างวงกลมและข้อความ */
+  }
+  
+  .progress-item i {
+    display: flex;
+    flex-direction: column; /* วางวงกลมและข้อความในแนวตั้ง */
+    align-items: center; /* จัดกึ่งกลาง */
+    text-align: center;
+    flex: 1; /* กระจายพื้นที่เท่าๆ กัน */
+  }
+  
+  .progress-bar div p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .status-section {
+    text-align: center;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .order-info {
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .order-info img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .order-info .details h5 {
+    color: #212529;
+  }
+  
+  .order-info .details p.text-danger {
+    color: #ff6b6b;
+  }
+  
+  .order-summary p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .footer-buttons .btn-detail {
+    background-color: #f8f9fa;
+    color: #6c757d;
+  }
+  
+  .footer-buttons .btn-cancel {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  .order {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    /* ความกว้างสูงสุด */
+    margin: 0 auto;
+    /* จัดกลาง */
+    margin-top: 23px;
+    padding: 20px;
+    /* เว้นระยะขอบ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-header .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-header .user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .order-header .shop-link {
+    color: #ff66b2;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .order-summary {
+    background-color: #f9f9f9;
+    /* เพิ่มพื้นหลัง */
+    padding: 15px 20px;
+    /* เพิ่มระยะห่างภายใน */
+    border-radius: 8px;
+    /* มุมโค้งมน */
+    border: 1px solid #ddd;
+    /* เส้นขอบ */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+  }
+  
+  .order-summary .summary-item {
+    display: flex;
+    /* จัดเรียงข้อความเป็นแถว */
+    justify-content: space-between;
+    /* เว้นระยะระหว่าง label และ value */
+    margin-bottom: 10px;
+    /* เพิ่มช่องว่างระหว่างรายการ */
+  }
+  
+  .order-summary .summary-item .label {
+    font-weight: bold;
+    /* ทำให้ข้อความตัวหนา */
+    color: #333;
+  }
+  
+  .order-summary .summary-item .value {
+    font-size: 14px;
+    /* ขนาดตัวอักษรของ value */
+    color: #555;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ดันข้อความไปทางขวา */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    /* เพิ่มขอบกรอบ */
+    border-radius: 10px;
+    /* มุมโค้งมน */
+    padding: 10px;
+    /* เพิ่มพื้นที่ภายในกรอบ */
+    background-color: #fff;
+    /* ตั้งพื้นหลังสีขาว */
+  }
+  
+  .order-item img {
+    max-width: 120px;
+    /* ขนาดภาพ */
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .details-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* จัดข้อความชิดขวา */
+    margin-left: 20px;
+    /* ระยะห่างระหว่างรูปกับข้อความ */
+  }
+  
+  .details-right .item-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #333;
+    text-align: right;
+    /* จัดข้อความให้ชิดขวา */
+  }
+  
+  .details-right .quantity {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 5px;
+    text-align: right;
+  }
+  
+  .details-right .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5555;
+    margin: 0;
+    text-align: right;
+  }
+  
+  .review-status {
+    border: 2px solid #ddd;
+    /* กรอบ */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    padding: 20px;
+    /* ระยะห่างภายในกรอบ */
+    background-color: #f9f9f9;
+    /* สีพื้นหลัง */
+    max-width: 800px;
+    /* ความกว้างเท่ากับ .order */
+    margin: 20px auto;
+    /* จัดกลาง */
+  }
+  
+  .status-header {
+    text-align: left;
+    /* จัดข้อความชิดซ้าย */
+    margin-bottom: 10px;
+    /* เว้นระยะห่าง */
+  }
+  
+  .status-title {
+    font-size: 18px;
+    /* ขนาดตัวอักษร */
+    font-weight: bold;
+    /* ทำให้ตัวหนา */
+    color: #ff69B4;
+    /* สีข้อความ */
+  }
+  
+  .status-body p {
+    font-size: 16px;
+    /* ขนาดตัวอักษร */
+    color: #555;
+    /* สีข้อความ */
+    text-align: left;
+    /* จัดข้อความให้ตรงกลาง */
+  }
+  
+  .review-status {
+    border: 2px solid #ddd;
+    /* กรอบ */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    padding: 20px;
+    /* ระยะห่างภายในกรอบ */
+    background-color: #f9f9f9;
+    /* สีพื้นหลัง */
+    max-width: 600px;
+    /* ขนาดสูงสุด */
+    margin: 20px auto;
+    /* จัดกลาง */
+  }
+  
+  .status-header {
+    text-align: left;
+    /* จัดข้อความชิดซ้าย */
+    margin-bottom: 10px;
+    /* เว้นระยะห่าง */
+  }
+  
+  .status-title {
+    font-size: 18px;
+    /* ขนาดตัวอักษร */
+    font-weight: bold;
+    /* ทำให้ตัวหนา */
+    color: #FF69B4;
+    /* สีชมพู */
+  }
+  
+  .status-body p {
+    font-size: 16px;
+    /* ขนาดตัวอักษร */
+    color: #888;
+    /* สีเทาบางๆ */
+    text-align: left;
+    /* จัดข้อความชิดซ้าย */
+  }
+  .ccc{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .krob{
+    justify-content: center;
+    height: 130px;
+    width: 800px;
+    padding: 10px;
+    margin: auto;
+    color: #FF69B4;
+
+
+  }
+  .hel{
+    color: #FF69B4;
+    justify-content: space-between;
+  }
+  .lol p{
+    margin-left: 7px;
+    padding: 0 0 0 0;
+    color: #6c757d;
+  }
+  .time{
+    margin-left: 25px;
+    color: #6c757d;
+  }
+  .footer-buttons .btn-detail2 {
+    background-color: #fadef5;
+    color: #FF69B4;
+  }
+  .container1{
+    width: 100%;
+    text-align: center;
+
+  }
+.pum{
+  background-color: #fadef5;
+  color: #FF69B4;
+}
+.pum:hover{
+  background-color: #fadef5;
+  color:#d1aaca;
+}
