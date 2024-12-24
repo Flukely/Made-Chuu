@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund/Return Form</title>
+  <link rel="stylesheet" href="kame.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Made Chuu</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Review</a>
+        <a href="#">User Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <h2>รายละเอียดการคืนเงิน/คืนสินค้า</h2>
+      <div class="product-summary">
+        <div class="product-info">
+          <img src="product-image.jpg" alt="Product Image">
+          <div>
+            <p><strong>Mom Mam</strong> | <a href="#">ติดต่อผู้ขาย</a></p>
+            <p>Under The Sea</p>
+          </div>
+        </div>
+        <div class="product-price">
+          <p>จำนวน: 1</p>
+          <p>ราคา: ฿10.99</p>
+          <p class="status-success">จัดส่งสำเร็จ</p>
+        </div>
+      </div>
+      <form>
+        <label for="reason">เหตุผล <span>*</span></label>
+        <select id="reason" required>
+          <option>ฉันไม่ได้รับพัสดุของคำสั่งซื้อนี้</option>
+          <option>ได้รับสินค้าไม่ครบ/ชิ้นส่วนไม่ครบ</option>
+          <option>ได้รับสินค้าไม่ตรงตามที่สั่ง เช่น สีผิด สินค้าผิด</option>
+          <option>สินค้าแตกหักเป็นชิ้นๆ/แตกหักละเอียดอ่อน</option>
+          <option>ความเสียหายอื่นๆ</option>
+          <option>อื่นๆ</option>
+        </select>
+
+        <label for="refund-amount">จำนวนเงินคืน</label>
+        <input type="text" id="refund-amount" value="฿10.99" readonly>
+
+        <label for="details">รายละเอียด</label>
+        <textarea id="details" placeholder="กรอกปัญหาที่คุณพบ"></textarea>
+
+        <div class="upload-section">
+          <label class="upload-button">
+            เพิ่มรูปภาพ
+            <input type="file" accept="image/*" hidden>
+          </label>
+          <label class="upload-button">
+            เพิ่มวิดีโอ
+            <input type="file" accept="video/*" hidden>
+          </label>
+        </div>
+
+        <label for="email">อีเมล <span>*</span></label>
+        <input type="email" id="email" placeholder="กรอกอีเมล" >
+
+        <div class="buttons">
+          <button type="reset" class="cancel-button">ยกเลิก</button>
+          <button type="button" class="submit-button" onclick="window.location.href='mom.html';">ส่ง</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+</body>
+</html>
