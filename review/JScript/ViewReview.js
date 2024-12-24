@@ -9,8 +9,8 @@ function loadReview() {
 
         // อัปเดตส่วน content ของรีวิว
         document.querySelector(".review-content img").src = reviewData.productImage;
-        document.querySelector(".review-content img").alt = reviewData.productName;
-        document.querySelector(".review-content div").innerHTML = `<b>${reviewData.productName}</b>: ${reviewData.reviewText}`;
+        //document.querySelector(".review-content img").alt = reviewData.productName;
+        document.querySelector(".review-content div").innerHTML = `<b></b>: ${reviewData.reviewText}`;
     } else {
         console.log("No review data found in localStorage.");
     }
@@ -30,7 +30,7 @@ function generateStars(rating) {
 function goToReviewing(productName, productImage, productSelection, reviewDetails) {
     // Save review details to localStorage
     localStorage.setItem('reviewProductName', productName);
-    localStorage.setItem('reviewProductImage', productImage);
+    //localStorage.setItem('reviewProductImage', productImage);
     localStorage.setItem('reviewProductSelection', productSelection);
     localStorage.setItem('reviewDetails', reviewDetails);
 

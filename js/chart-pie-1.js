@@ -5,8 +5,8 @@ var options = {
     height: 350
   },
   series: [55, 30, 15], // ข้อมูลตัวเลข
-  labels: ['Direct', 'Social', 'Referral'], // ชื่อหมวดหมู่
-  colors: ['#4e73df', '#1cc88a', '#36b9cc'], // สีของกราฟ
+  labels: ['Flower', 'Accessories', 'Keychain'], // ชื่อหมวดหมู่
+  colors: ['#D9A4D4', '#F2C5D6', '#EF8CB0'], // สีของกราฟ
   legend: {
     show: false, // แสดง legend
     position: 'bottom' // ตำแหน่ง legend

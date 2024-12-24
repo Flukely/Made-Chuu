@@ -1,45 +1,66 @@
-// ข้อมูลและการตั้งค่าสำหรับ ApexCharts Line Chart
-var options = {
-    chart: {
-      type: 'line', // เปลี่ยนเป็น line chart
-      height: 350
-    },
-    series: [
-      {
-        name: 'ยอดขาย',
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148] // ข้อมูลกราฟ
-      }
-    ],
-    xaxis: {
-      categories: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.'] // ชื่อแกน X
-    },
-    yaxis: {
-      title: {
-        text: 'ยอดขาย (บาท)' // ชื่อแกน Y
-      }
-    },
-    colors: ['#4e73df'], // สีของเส้น
-    stroke: {
-      width: 2, // ความหนาของเส้น
-      curve: 'smooth' // เส้นโค้งนุ่มนวล
-    },
-    markers: {
-      size: 4, // ขนาดจุด
-      colors: ['#1cc88a'], // สีของจุด
-      strokeColors: '#fff',
-      strokeWidth: 2
-    },
-    tooltip: {
-      theme: 'light', // ธีม tooltip
-      y: {
-        formatter: function (val) {
-          return `${val} บาท`; // เพิ่มหน่วยบาทใน tooltip
-        }
-      }
-    }
-  };
-  
-  // สร้างกราฟและแสดงผลใน id "myLineChart"
-  var chart = new ApexCharts(document.querySelector("#myLineChart"), options);
-  chart.render();
-  
+// ข้อมูลตัวอย่าง
+var data = {
+  daily: [10, 20, 15, 25, 30, 35, 40],
+  monthly: [300, 450, 500, 600, 700, 750, 800],
+  yearly: [4500, 4700, 4900, 5200, 5800, 6000, 6500]
+};
+
+// ตัวเลือกสำหรับกราฟ
+var optionsLine = {
+  chart: {
+    type: 'line',
+    height: 350,
+    zoom: { enabled: false }
+  },
+  series: [{
+    name: 'ยอดขาย',
+    data: data.daily // เริ่มต้นที่ข้อมูลรายวัน
+  }],
+  xaxis: {
+    categories: ['1', '2', '3', '4', '5', '6', '7'], // วันที่, เดือน หรือปี
+    title: { text: 'ช่วงเวลา' }
+  },
+  yaxis: {
+    title: { text: 'ยอดขาย (บาท)' }
+  },
+  colors: ['#1cc88a'],
+  stroke: { width: 2, curve: 'smooth' },
+  tooltip: { theme: 'light' },
+  legend: { position: 'top' }
+};
+
+// สร้างกราฟ
+var chartLine = new ApexCharts(document.querySelector("#salesTrendChart"), optionsLine);
+chartLine.render();
+
+// ฟังก์ชันอัปเดตกราฟ
+function updateChart(type) {
+  chartLine.updateSeries([{ name: 'ยอดขาย', data: data[type] }]);
+
+  if (type === 'daily') {
+    chartLine.updateOptions({
+      xaxis: { categories: ['1', '2', '3', '4', '5', '6', '7'], title: { text: 'วันที่' } }
+    });
+    document.getElementById('selectedPeriod').innerText = 'ข้อมูลแบบ: รายวัน';
+  } else if (type === 'monthly') {
+    chartLine.updateOptions({
+      xaxis: { categories: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.'], title: { text: 'เดือน' } }
+    });
+    document.getElementById('selectedPeriod').innerText = 'ข้อมูลแบบ: รายเดือน';
+  } else if (type === 'yearly') {
+    chartLine.updateOptions({
+      xaxis: { categories: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'], title: { text: 'ปี' } }
+    });
+    document.getElementById('selectedPeriod').innerText = 'ข้อมูลแบบ: รายปี';
+  }
+}
+
+// กำหนด Event Listener ให้ Dropdown
+document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('click', function (event) {
+    event.preventDefault();  // ป้องกันการรีเฟรชหน้า
+
+    const selectedValue = event.target.getAttribute('data-type'); // รับค่าจาก data-type
+    updateChart(selectedValue); // เรียกฟังก์ชัน updateChart
+  });
+});
