@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5f8;
+}
+header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+}
+.banner {
+    text-align: center;
+    background-image: url('../Pic/crochet.jpg');
+    padding: 50px 20px;
+}
+.banner h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+.review-section {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffe4ec;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.review-content {
+    display: flex;
+    margin: 20px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.review-content img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+footer a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #555;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Tracking Purches</title>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- External CSS -->
+
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <h1 style="margin-left: 20px;">Made Chuu</h1>
+
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="###" class="nav-item nav-link"><i class="fa-solid fa-house me-2"></i>Home</a>
+
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-cart-fill"></i>
+            Shop</a>
+          <div class="dropdown-menu fade-up m-0">
+            <a href="ourshop-flower-01.html" class="dropdown-item">Flower</a>
+            <a href="ourshop-accessories-01.html" class="dropdown-item">Accessorie</a>
+            <a href="ourshop-keychain-01.html" class="dropdown-item">Keychain</a>
+          </div>
+        </div>
+        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown" style="margin-right: 20px;">Review</a>
+        <!--<a href="###" class="material-symbols-outlined" style="margin-top: 25px; margin-right: 20px; color: black;"  >
+                 shopping_cart
+                 </a>-->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-person-fill"></i> User
+            Access</a>
+          <div class="dropdown-menu fade-up m-0">
+            <a href="#" class="dropdown-item">User</a>
+            <a href="#" class="dropdown-item">Admin</a>
+          </div>
+        </div>
+
+      </div>
+  </nav>
+  <!-- Navbar End -->
+  <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <br>
+  <main>
+    <div class="progress-steps">
+      <div class="step active">
+        <i class="bi bi-wallet2"></i><span>คำสั่งซื้อ</span>
+      </div>
+      <div class="step">
+        <i class="bi bi-box-seam"></i><span>กำลังรอขนส่งเข้ารับ</span>
+      </div>
+      <div class="step">
+        <i class="bi bi-truck"></i><span><span>อยู่ระหว่างจัดส่ง</span>
+      </div>
+      <div class="step">
+        <i class="bi bi-check2-circle"></i><span>จัดส่งสำเร็จ</span>
+      </div>
+    </div>
+
+    <section class="form-container">
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <img src="D:\Working Homework\year3\Internet\test\img\keychain\page-1\product-1.jpg" alt="Product"
+            class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <h2>Product Name</h2>
+          <p class="text-muted">Subheading</p>
+          <h3 class="colorbath">฿10.99</h3>
+          <p class="text-muted"> Body text for describing what this product is and why this product is simply a
+            must-buy.</p>
+          <button class="btn-pink" data-bs-toggle="modal" data-bs-target="#cancelOrderModal">ยกเลิกคำสั่งซื้อ</button>
+          <div style="height: 50px;"></div>
+        </div>
+
+        <!-- Modal การยกเลิกคำสั่งซื้อ -->
+        <div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-labelledby="cancelOrderModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cancelOrderModalLabel">ยืนยันการยกเลิกคำสั่งซื้อ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="cancelForm">
+                  <div class="mb-3">
+                    <label for="cancelReason" class="form-label">เหตุผลการยกเลิก:</label>
+                    <select class="form-select" id="cancelReason" required>
+                      <option value="">เลือกเหตุผล</option>
+                      <option value="changed_mind">เปลี่ยนใจ</option>
+                      <option value="found_cheaper">เจอราคาถูกกว่า</option>
+                      <option value="delayed_delivery">การจัดส่งล่าช้า</option>
+                      <option value="other">อื่นๆ</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comments" class="form-label">ความคิดเห็นเพิ่มเติม (ถ้ามี):</label>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" id="confirmCancel" class="btn btn-danger">ยืนยันการยกเลิก</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal ยกเลิกสำเร็จ -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+              <div class="modal-body">
+                <h5 class="text-success">ยกเลิกสำเร็จ</h5>
+                <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: green;"></i>
+                <p class="mt-3">คำสั่งซื้อของคุณถูกยกเลิกสำเร็จ</p>
+                <a href="shop.html" class="btn btn-secondary mt-3">ทำการซื้อสินค้าต่อ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mb-4">
+          <h4>Customer Name (094 *** ****)</h4>
+          <p>Address</p>
+        </div>
+
+        <div class="mb-4">
+          <h4>วิธีการชำระเงิน</h4>
+          <select>
+            <option>Prompt Pay</option>
+          </select>
+        </div>
+
+        <div class="order-summary">
+          <h4>สรุปคำสั่งซื้อ</h4>
+          <table>
+            <tr>
+              <td>ยอดรวม</td>
+              <td>฿xx.xx</td>
+            </tr>
+            <tr>
+              <td>การจัดส่ง</td>
+              <td>฿xx.xx</td>
+            </tr>
+            <tr>
+              <td>ส่วนลด</td>
+              <td>-฿xx.xx</td>
+            </tr>
+            <tr>
+              <td><strong>ทั้งหมด</strong></td>
+              <td><strong>฿xx.xx</strong></td>
+            </tr>
+          </table>
+        </div>
+        <div style="height: 20px;"></div>
+
+        <div class="related-products">
+          <h4>สินค้าอื่นๆ</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="D:\Working Homework\year3\Internet\test\img\mommam\family.jpg" alt="Family"
+                  class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Family</h5>
+                  <p class="card-text">Description of second product</p>
+                  <p class="card-text colorbath">฿19.99</p>
+                  <button class="btn-cart">
+                    <a href="#" class="cart-icon"><i class="bi bi-cart"></i></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="D:\Working Homework\year3\Internet\test\img\mommam\1750.jpg" alt="1750" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">1750</h5>
+                  <p class="card-text">Description of second product</p>
+                  <p class="card-text colorbath">฿19.99</p>
+                  <button class="btn-cart">
+                    <a href="#" class="cart-icon"><i class="bi bi-cart"></i></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="D:\Working Homework\year3\Internet\test\img\mommam\Underthesea.jpg" alt="Under The Sea"
+                  class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Under The Sea</h5>
+                  <p class="card-text">Description of second product</p>
+                  <p class="card-text colorbath">฿19.99</p>
+                  <button class="btn-cart">
+                    <a href="#" class="cart-icon"><i class="bi bi-cart"></i></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("confirmCancel").addEventListener("click", function () {
+      // ดึงค่าเหตุผลการยกเลิก
+      const reason = document.getElementById("cancelReason").value.trim();
+
+      // ตรวจสอบว่าผู้ใช้เลือกเหตุผลหรือไม่
+      if (!reason) {
+        alert("กรุณาเลือกเหตุผลการยกเลิก");
+        return;
+      }
+
+      // ปิด Modal การยกเลิกคำสั่งซื้อ
+      const cancelOrderModal = bootstrap.Modal.getInstance(document.getElementById('cancelOrderModal'));
+      cancelOrderModal.hide();
+
+      // แสดง Modal ยกเลิกสำเร็จ
+      const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+      successModal.show();
+    });
+    // ดึงองค์ประกอบโมดอล
+    const cancelOrderModal = document.getElementById('cancelOrderModal');
+
+    // เพิ่ม event listener เมื่อโมดอลกำลังจะถูกเปิด
+    cancelOrderModal.addEventListener('show.bs.modal', function () {
+      // รีเซ็ตค่าใน select ให้กลับไปที่ค่าเริ่มต้น
+      document.getElementById('cancelReason').selectedIndex = 0;
+      // ล้างข้อความใน textarea
+      document.getElementById('comments').value = '';
+    });
+
+  </script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+
+
+
+
+
+</body>
+
+</html>

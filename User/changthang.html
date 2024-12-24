@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made Chuu - Payment Info</title>
+    <link rel="stylesheet" href="kame.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Made Chuu</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Review</a>
+                <a href="#">User Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>เพิ่มช่องทางการคืนเงิน</h2>
+            <form>
+                <label for="phone-number">กรอกเลขพร้อมเพย์</label>
+                <input type="text" id="phone-number" placeholder="089xxxxxxxx">
+
+                <label>แนบรูป QR-Code พร้อมเพย์</label>
+                <div class="upload-section">
+                    <input type="file" id="qr-code" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                    <button type="button" class="upload-button" onclick="document.getElementById('qr-code').click();">เพิ่มรูปภาพ</button>
+                    <div id="preview-container" style="margin-top: 10px;"></div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" class="cancel-button">ยกเลิก</button>
+                    <button type="submit" class="submit-button">บันทึก</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function previewImage(event) {
+            const previewContainer = document.getElementById('preview-container');
+            previewContainer.innerHTML = ""; // Clear previous preview
+
+            const file = event.target.files[0];
+            if (file) {
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                img.style.maxWidth = '150px';
+                img.style.marginTop = '10px';
+                previewContainer.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>

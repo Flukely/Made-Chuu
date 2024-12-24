@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewing - Made Chuu</title>
+    <link rel="stylesheet" href="./CSS/Reviewing.css">
+</head>
+
+<body>
+    <header>
+        <div><b>Made Chuu</b></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Review</a>
+            <a href="#">User Account</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="banner">
+            <h1>Review</h1>
+        </div>
+        <div class="space">
+            ---
+        </div>
+        <div class="review-card">
+            <!-- Dropdown List -->
+            <label for="product-selection" class="dropdown-label">เลือกสินค้า:</label>
+            <select id="product-selection" class="dropdown">
+                <option value="Disrabbit" data-name="Disrabbit" data-image="./Pic/dis.jpg">Disrabbit</option>
+                <option value="Broccoli" data-name="Broccoli" data-image="./Pic/broccori.jpg">Broccoli</option>
+                <option value="Under the sea" data-name="Under the sea" data-image="./Pic/under_the_sea.jpg">Under the sea</option>
+                <option value="1750" data-name="1750" data-image="./Pic/1750.jpg">1750</option>
+            </select>
+
+            <img src="./Pic/dis.jpg" alt="Disrabbit" id="product-image" class="product-image">
+            <div class="product-info">
+                <h3 id="product-name" class="product-name">Disrabbit</h3>
+                <p class="product-selection">ตัวเลือกสินค้า: xx(any)</p>
+                <hr>
+                <p class="product-rating">คุณภาพของสินค้า</p>
+                <!-- Interactive Star Rating -->
+                <div class="stars" id="star-rating">
+                    <span data-value="1" class="star">★</span>
+                    <span data-value="2" class="star">★</span>
+                    <span data-value="3" class="star">★</span>
+                    <span data-value="4" class="star">★</span>
+                    <span data-value="5" class="star">★</span>
+                </div>
+                <p id="rating-value" class="rating-value">Rating: 0/5</p>
+                <hr>
+                <p class="add-image">เพิ่มรูปภาพสินค้า</p>
+                <!-- File Input for Uploading Multiple Images -->
+                <input type="file" id="image-upload" class="file-input" accept="image/*" multiple>
+                <!-- Container for Multiple Image Previews -->
+                <div id="image-preview-container" class="image-preview-container"></div>
+                <textarea placeholder="รายละเอียดเพิ่มเติมเขียนตรงนี้" class="review-text"></textarea>
+                <a href="./ViewReview.html"><button class="confirm-btn" onclick="saveReview()">Confirm</button></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Site name</p>
+            <nav>
+                <a href="#">Topic</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="./JScript/Reviewing.js"></script>
+</body>
+
+</html>

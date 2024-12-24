@@ -1,0 +1,239 @@
+/* รีเซ็ตค่าเบื้องต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .navbar nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .navbar nav a:hover {
+    color: #ff69b4;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    color: #ff69b4;
+    font-size: 1.5rem;
+  }
+  
+  .product-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-info {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .product-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .product-price p {
+    margin: 0.2rem 0;
+  }
+  
+  .status-success {
+    color: green;
+  }
+  
+  form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .upload-section {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .upload-section button {
+    padding: 0.5rem 1rem;
+    background:#ff85c5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .upload-section button:hover {
+    background: #ddd;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .cancel-button {
+    background: #ccc;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    background: #ff69b4;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background: #bbb;
+  }
+  
+  .submit-button:hover {
+    background: #ff85c5;
+  }
+  /* ปุ่มอัปโหลด (เพิ่มรูปภาพและวิดีโอ) */
+.upload-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #ff69b4; /* สีชมพู */
+  color: #fff;
+  border: 1px solid #ff69b4;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.upload-button:hover {
+  background: #ff85c5; /* สีชมพูอ่อนขึ้นเมื่อวางเมาส์ */
+  border: 1px solid #ff85c5;
+}
+
+.upload-button input {
+  display: none;
+}
+.movetoright {
+ 
+  display: flex;
+  justify-content: space-between;
+}
+.red {
+  color: #ff0202;
+}
+.pink {
+  color: #F2C5D6;
+}
+.success-container {
+  background-color: white;
+  width: 60%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: black;
+  margin: 20px 0;
+}
+
+.success-icon span {
+  display: inline-block;
+  border: 2px solid rgb(26, 255, 0);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.track-status-button {
+  background-color: #ddd;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.track-status-button:hover {
+  background-color: #bbb;
+}
