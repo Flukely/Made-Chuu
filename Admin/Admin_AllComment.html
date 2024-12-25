@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Made Chuu</title>
+    <title>ka_jang_handmade</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -35,7 +35,7 @@
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <lin    ref="css/bootstrap.min.css" rel="stylesheet">
+    <lin    ref="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
         <link href="/css/style.css" rel="stylesheet">
@@ -61,41 +61,47 @@
     </nav>
     <!-- Navbar End -->
     <!-- SideBar Startt -->
+    <!-- SideBar Startt -->
     <div class="offcanvas offcanvas-start w-20" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body px-0">
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
-            <li class = "box-sidebar">
-                <a href="Admin_Dashboard.html" class="nav-link text-truncate ">
-                    <i class="fs-5 bi bi-clipboard-data"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> 
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllProduct.html" class="nav-link text-truncate">
-                    <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span>
-                </a>
-
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllPromotion.html" class="nav-link text-truncate ">
-                    <i class="fs-5 bi bi-megaphone-fill"></i><span class="ms-1 d-none d-sm-inline">Promotions</span>
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllComment.html" class="nav-link text-truncate">
-                 <i class="fs-5 bi bi-chat-left-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Comments</span>
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllOrder.html" class="nav-link text-truncate">
-                    <i class="fs-5 bi bi-cart-check-fill"></i><span class="ms-1 d-none d-sm-inline">Orders</span> 
-                </a>
-            </li>
-        </ul>
-    </div>
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+                <li class = "box-sidebar">
+                    <a href="Admin_Dashboard.html" class="nav-link text-truncate ">
+                        <i class="fs-5 bi bi-clipboard-data"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> 
+                    </a>
+                </li>
+                <li class = "box-sidebar">
+                    <a href="Admin_AllProduct.html" class="nav-link text-truncate">
+                        <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span>
+                    </a>
+    
+                </li>
+                <li class = "box-sidebar">
+                    <a href="Admin_AllPromotion.html" class="nav-link text-truncate ">
+                        <i class="fs-5 bi bi-megaphone-fill"></i><span class="ms-1 d-none d-sm-inline">Promotions</span>
+                    </a>
+                </li>
+                <li class = "box-sidebar">
+                    <a href="Admin_AllComment.html" class="nav-link text-truncate">
+                     <i class="fs-5 bi bi-chat-left-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Comments</span>
+                    </a>
+                </li>
+                <li class = "box-sidebar">
+                    <a href="Admin_A_Chat.html" class="nav-link text-truncate ">
+                        <i class="bi bi-chat-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Chats</span>
+                    </a>
+                </li>
+                <li class = "box-sidebar">
+                    <a href="Admin_AllOrder.html" class="nav-link text-truncate">
+                        <i class="fs-5 bi bi-cart-check-fill"></i><span class="ms-1 d-none d-sm-inline">Orders</span> 
+                    </a>
+                </li>
+            </ul>
+        </div>
 </div>
      <!-- SideBar End -->
 
@@ -127,25 +133,9 @@
           <select id="filter-product" onchange="filterComments()">
               <option value="">-- ทั้งหมด --</option>
               <option value="แก้วเซรามิก">แก้วเซรามิก</option>
-              <option value="Flower">Flower</option>
               <option value="Something">Something</option>
           </select>
       </div>
-
-      <div id="comments">
-        <div class="comment" data-content="สินค้าดีมาก">
-            <div class="comment-body">
-                <img class="product-image" src="/img/flower/page-1/product-1.png" alt="Flower">
-                <p><strong>FLODUCKY</strong><br>ตัวเลือกสินค้า: Flower</p>
-            </div>
-            <div class="customer-name">คุณสมร</div>
-            <div class="comment-date">10 ธันวาคม 2024</div>
-            <p>สินค้าดีมาก สวยย</p>
-            <div class="reply">
-                <textarea placeholder="ตอบกลับ..."></textarea>
-                <button>ตอบกลับ</button>
-            </div>
-        </div>
 
       <div id="comments">
           <div class="comment" data-content="สินค้าดีมาก">

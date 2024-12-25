@@ -7,7 +7,7 @@
   <meta name="description" content="Admin Dashboard" />
   <meta content="" name="keywords">
     <meta content="" name="description">
-  <title>Made Chuu</title>
+  <title>Admin Dashboard</title>
     <!-- bootstrap-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -84,42 +84,46 @@
 <!-- Navbar End -->
 <!-- SideBar Startt -->
 <div class="offcanvas offcanvas-start w-20" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body px-0">
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
-            <li class = "box-sidebar">
-                <a href="Admin_Dashboard.html" class="nav-link text-truncate ">
-                    <i class="fs-5 bi bi-clipboard-data"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> 
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllProduct.html" class="nav-link text-truncate">
-                    <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span>
-                </a>
+  <div class="offcanvas-header">
+      <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-0">
+      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+          <li class = "box-sidebar">
+              <a href="Admin_Dashboard.html" class="nav-link text-truncate ">
+                  <i class="fs-5 bi bi-clipboard-data"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> 
+              </a>
+          </li>
+          <li class = "box-sidebar">
+              <a href="Admin_AllProduct.html" class="nav-link text-truncate">
+                  <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span>
+              </a>
 
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllPromotion.html" class="nav-link text-truncate ">
-                    <i class="fs-5 bi bi-megaphone-fill"></i><span class="ms-1 d-none d-sm-inline">Promotions</span>
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllComment.html" class="nav-link text-truncate">
-                 <i class="fs-5 bi bi-chat-left-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Comments</span>
-                </a>
-            </li>
-            <li class = "box-sidebar">
-                <a href="Admin_AllOrder.html" class="nav-link text-truncate">
-                    <i class="fs-5 bi bi-cart-check-fill"></i><span class="ms-1 d-none d-sm-inline">Orders</span> 
-                </a>
-            </li>
-        </ul>
-    </div>
+          </li>
+          <li class = "box-sidebar">
+              <a href="Admin_AllPromotion.html" class="nav-link text-truncate ">
+                  <i class="fs-5 bi bi-megaphone-fill"></i><span class="ms-1 d-none d-sm-inline">Promotions</span>
+              </a>
+          </li>
+          <li class = "box-sidebar">
+              <a href="Admin_AllComment.html" class="nav-link text-truncate">
+               <i class="fs-5 bi bi-chat-left-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Comments</span>
+              </a>
+          </li>
+          <li class = "box-sidebar">
+              <a href="Admin_A_Chat.html" class="nav-link text-truncate ">
+                  <i class="bi bi-chat-dots-fill"></i><span class="ms-1 d-none d-sm-inline">Chats</span>
+              </a>
+          </li>
+          <li class = "box-sidebar">
+              <a href="Admin_AllOrder.html" class="nav-link text-truncate">
+                  <i class="fs-5 bi bi-cart-check-fill"></i><span class="ms-1 d-none d-sm-inline">Orders</span> 
+              </a>
+          </li>
+      </ul>
+  </div>
 </div>
- <!-- SideBar End -->
 
   <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5">
@@ -430,10 +434,7 @@
 
     </div>
   </div>
-      <script src="/js/chart-pie-1.js"></script>
-      <script src="/js/chart-line-1.js"></script>
-      <script src="/js/DataTable.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -444,8 +445,12 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
-<!-- mainJS -->
-<script src="/js/main.js"></script> 
 
+        <!-- Template Javascript -->
+        <script src="/js/main.js"></script>
+      <script src="/js/chart-pie-1.js"></script>
+      <script src="/js/chart-line-1.js"></script>
+      <script src="/js/DataTable.js"></script>
+      
 </body>
 </html>

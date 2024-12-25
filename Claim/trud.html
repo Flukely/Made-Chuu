@@ -64,6 +64,8 @@
                  <a href="/index.html" class="dropdown-item">Flower</a>
                  <a href="/ourshop-accessories-01.html" class="dropdown-item">Accessorie</a>
                  <a href="/ourshop-keychain-01.html" class="dropdown-item">Keychain</a>
+                 <a href="/ourshop-Ceramics.html" class="dropdown-item">Ceramics</a>
+                 <a href="/ourshop-picture.html" class="dropdown-item">Picture</a>
              </div>
          </div>
          <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown" style="margin-right: 20px;">Review</a> 
@@ -111,7 +113,7 @@
         <!--<img src="img/dis.jpg" alt="User Avatar">-->
         <span class="pink-text">ka jang</span>
       </div>
-      <a href="/Chat/Chat-ka-jang.html" class="shop-link">ไปยังร้านค้า ></a>
+      <a href="/Chat/Chat-ka-jang.html" class="shop-link">ติดต่อกับผู้ขาย ></a>
     </div>
     <div class="order-item">
       <img src="/img/flower/page-1/product-1.png" alt="Under The Sea" class="img-fluid">
@@ -146,10 +148,51 @@
     </div>
 
     <div class="footer-buttons">
-      <button class="btn btn-detail">รายละเอียดคำสั่งซื้อ</button>
-      <button class="btn btn-cancel">ยกเลิกคำขอ</button>
+      <button class="btn btn-detail" onclick="showPopup()">รายละเอียดคำสั่งซื้อ</button>
+
+      <!-- พื้นหลังมืด -->
+      <div class="overlay" id="overlay"></div>
+    
+      <!-- Popup -->
+      <div class="popup" id="popup">
+        <div class="popup-header">รายละเอียดคำสั่งซื้อ</div>
+        <div class="popup-content">
+          <p><b>ชื่อผู้รับ:</b> นายเอ บีซี๊ (094 *** ****)</p>
+          <p><b>ที่อยู่:</b> 99 หมู่ที่ 9 ถนน พิษณุโลก-นครสวรรค์ Tha Pho, Mueang Phitsanulok District, Phitsanulok 65000</p>
+          <p><b>หมายเลขคำสั่งซื้อ:</b> **** **** ****</p>
+          <p><b>วันที่สั่งซื้อ:</b> 30-11-2024 16:15</p>
+          <p><b>เวลาที่ชำระเงิน:</b> 30-11-2024 16:15</p>
+          <p><b>เวลาที่จัดส่งสินค้า:</b> 30-11-2024 16:15</p>
+          <p><b>วันที่ส่งมอบ:</b> 01-12-2024 12:15</p>
+        </div>
+        <div class="popup-footer">
+          <button onclick="closePopup()">ปิด</button>
+        </div>
+      </div>
+      <button class="btn btn-cancel" onclick="confirmCancel()">ยกเลิกคำขอ</button>
     </div>
 
+    <script>
+      // แสดง Popup
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    // ปิด Popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+      function confirmCancel() {
+        const userConfirmed = confirm("คุณต้องการยกเลิกคำขอใช่หรือไม่?");
+        if (userConfirmed) {
+          // เปลี่ยนเส้นทางไปยังหน้าที่ต้องการ
+          window.location.href = "/tracking/tracking_Fin.html"; 
+        } else {
+        }
+      }
+    </script>
     <!-- Bootstrap JS -->
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
