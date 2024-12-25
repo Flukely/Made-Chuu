@@ -116,6 +116,16 @@
                     </div>
             </div>
         </div>
+        <div class="seller-profile-container">
+            <div class="seller-info">
+                <img src="/img/logo-1.png" alt="Seller Profile" class="seller-img">
+                <div class="seller-details">
+                    <h5 class="seller-name">Ka JANG</h5>
+                    <p class="seller-description">Passionate creator of handmade products!</p>
+                </div>
+            </div>
+            <button class="chat-seller-btn" onclick="chatWithSeller()">Chat</button>
+        </div>
         <h4 class="similar">Similar</h4>
     </div> 
     <div class="simicon">
@@ -190,6 +200,10 @@
 
     <!-- Quantity Script dont worry dew is the best dev -->
     <script>
+            function chatWithSeller() {
+    // ตัวอย่างการเปิดลิงก์ไปยังแชท
+        window.location.href = '/Chat/Chat-ka-jang.html'; // แก้ไข URL ให้ตรงกับหน้าที่รองรับการแชท
+        }
         // ฟังก์ชันลดจำนวน
         document.getElementById('decrease').addEventListener('click', function() {
           const input = document.getElementById('quantity');

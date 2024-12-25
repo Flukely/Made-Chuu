@@ -1031,3 +1031,56 @@ Single Page Style
 .star {
     color: #ff9198;
 }
+.seller-profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.seller-info {
+    display: flex;
+    align-items: center;
+}
+
+.seller-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.seller-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.seller-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.seller-description {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+.chat-seller-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-seller-btn:hover {
+    background-color: #0056b3;
+}
